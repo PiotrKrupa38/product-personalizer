@@ -27,8 +27,8 @@ const ProductForm = (props) => {
             <span className={styles.price}>Price: {getPrice(props.basePrice, props.currentSize)}$</span>
         </header>
         <form onSubmit={(event) => sentOrder(event, props.title, props.basePrice, props.currentSize, props.currentColor)}>
-                <OptionSize colors={props.colors} currentColor={props.currentColor} setCurrentColor={props.setCurrentColor} />
-                <OptionColor sizes={props.sizes} currentSize={props.currentSize} setCurrentSize={props.setCurrentSize} />
+                <OptionSize sizes={props.sizes} currentSize={props.currentSize} setCurrentSize={props.setCurrentSize}  />
+                <OptionColor colors={props.colors} currentColor={props.currentColor} setCurrentColor={props.setCurrentColor} />
                 <Button>
                     <span className="fa fa-shopping-cart" />
                 </Button>
